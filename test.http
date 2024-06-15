@@ -1,0 +1,5 @@
+###GET all records
+GET http://localhost:8080/contacts
+
+###GET onee record
+GET http://localhost:8080/contacts/666da0da147735bfa6c3ed61
