@@ -1,19 +1,21 @@
 const express = require('express');
 const mongodb = require('./db/connect.js');
 const contactsRoutes = require('./routes/contacts.js');
+const compression = require('compression');
 const app = express();
 
 const port = process.env.PORT || 8080;
 
+app.use(compression);
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    next();
-  });
- app.use('/contacts', contactsRoutes);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  next();
+});
+app.use('/contacts', contactsRoutes);
 
- app.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Hello World!!');
-})
+});
 
 mongodb.initDb((err, mongodb) => {
   if (err) {

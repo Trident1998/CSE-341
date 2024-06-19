@@ -1,0 +1,8 @@
+###GET hello world!
+GET https://cse-341-a8j3.onrender.com/
+
+###GET all records
+GET https://cse-341-a8j3.onrender.com/contacts
+
+###GET onee record
+GET https://cse-341-a8j3.onrender.com/contacts/666da0da147735bfa6c3ed61
