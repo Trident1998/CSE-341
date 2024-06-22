@@ -13,9 +13,25 @@ POST http://localhost:8080/contacts
 Content-Type: application/json
 
 {
-    "firstName": "Branislav",
-    "lastName": "Bogosavac",
-    "email": "bogosavac@gmail.com",
-    "favoriteColor": "blue",
-    "birthday": "14-08-2000"
-  }
+  "firstName": "Dmytro",
+  "lastName": "Ivanytskyi",
+  "email": "divanytskyi@gmail.com",
+  "favoriteColor": "red",
+  "birthday": "23-07-1998"
+}
+
+
+###PUT Crreate user
+PUT http://localhost:8080/contacts/6676d5f02f57a20b9c44b86d
+Content-Type: application/json
+
+ {
+  "firstName": "Dmytro updated 1",
+  "lastName": "Ivanytskyi updated",
+  "email": "divanytskyi@gmail.com",
+  "favoriteColor": "red",
+  "birthday": "23-07-1998"
+}
+
+###DELETE Crreate user
+DELETE http://localhost:8080/contacts/6676dba0574ce7d51563f57c

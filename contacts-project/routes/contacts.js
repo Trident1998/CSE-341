@@ -8,8 +8,8 @@ router.get('/:contactId', connectsController.getContactById);
 
 router.post('/', connectsController.createContact);
 
-// router.put('/:contactId', connectsController.updateContact);
+router.put('/:contactId', connectsController.updateContact);
 
-// router.delete('/:contactId', connectsController.deleteContact);
+router.delete('/:contactId', connectsController.deleteContact);
 
 module.exports = router;
