@@ -1,5 +1,6 @@
 const express = require('express');
 const mongodb = require('./db/connect.js');
+const contactsRoutes = require('./routes/contacts.js');
 const app = express();
 var bodyParser = require('body-parser');
 const swaggerUi = require('swagger-ui-express');
@@ -14,7 +15,7 @@ app
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-  .use('/', require('./routes'));
+  .use('/contacts', contactsRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello World!!');
