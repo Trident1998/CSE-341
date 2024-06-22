@@ -2,9 +2,11 @@ const express = require('express');
 const mongodb = require('./db/connect.js');
 const contactsRoutes = require('./routes/contacts.js');
 const app = express();
+var bodyParser = require('body-parser');
 
 const port = process.env.PORT || 8080;
 
+app.use(bodyParser.json());
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   next();
