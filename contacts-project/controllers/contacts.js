@@ -4,6 +4,7 @@ const contactsController = {};
 
 contactsController.getAllContacts = async (req, res, next) => {
   const result = await mongodb.getDb().db().collection('contacts').find();
+
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json').status(200).json(lists);
   });
@@ -31,7 +32,7 @@ contactsController.createContact = async (req, res, next) => {
     console.log('Contact was inserted with the ID', result.insertedId);
     res.status(201).json({ contactId: result.insertedId }).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while inserting the contact.');
+    res.status(500).json(result.error || 'Some error occurred while inserting the contact.');
   }
 };
 
@@ -55,7 +56,7 @@ contactsController.updateContact = async (req, res, next) => {
     console.log('Contact was updated with the ID', contactId);
     res.status(201).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while updating the contact.');
+    res.status(500).json(result.error || 'Some error occurred while updating the contact.');
   }
 };
 
