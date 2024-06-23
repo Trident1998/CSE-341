@@ -7,7 +7,6 @@ GET https://cse-341-a8j3.onrender.com/contacts
 ###GET onee record
 GET https://cse-341-a8j3.onrender.com/contacts/6676f32f9b51e792e510536c
 
-
 ###POST Crreate user
 POST https://cse-341-a8j3.onrender.com/contacts
 Content-Type: application/json
@@ -20,8 +19,7 @@ Content-Type: application/json
   "birthday": "23-07-1998"
 }
 
-
-###PUT Crreate user
+###PUT Upedate user
 PUT https://cse-341-a8j3.onrender.com/contacts/6676f32f9b51e792e510536c
 Content-Type: application/json
 
