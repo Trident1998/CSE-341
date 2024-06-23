@@ -5,11 +5,11 @@ GET https://cse-341-a8j3.onrender.com/
 GET https://cse-341-a8j3.onrender.com/contacts
 
 ###GET onee record
-GET http://localhost:8080/contacts
+GET https://cse-341-a8j3.onrender.com/contacts/6676f32f9b51e792e510536c
 
 
 ###POST Crreate user
-POST http://localhost:8080/contacts
+POST https://cse-341-a8j3.onrender.com/contacts
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ Content-Type: application/json
 
 
 ###PUT Crreate user
-PUT http://localhost:8080/contacts/6676d5f02f57a20b9c44b86d
+PUT https://cse-341-a8j3.onrender.com/contacts/6676f32f9b51e792e510536c
 Content-Type: application/json
 
  {
@@ -34,4 +34,4 @@ Content-Type: application/json
 }
 
 ###DELETE Crreate user
-DELETE http://localhost:8080/contacts/6676dba0574ce7d51563f57c
+DELETE https://cse-341-a8j3.onrender.com/contacts/6676f32f9b51e792e510536c
