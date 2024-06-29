@@ -11,12 +11,16 @@ router.get('/:id', utilities.handleErrors(booksController.getSingle));
 
 router.post(
   '/',
-  utilities.handleErrors(bookValidationRules(), validate, booksController.createBookRecord)
+  bookValidationRules(),
+  validate,
+  utilities.handleErrors(booksController.createBookRecord)
 );
 
 router.put(
   '/:id',
-  utilities.handleErrors(bookValidationRules(), validate, booksController.updateBookRecord)
+  bookValidationRules(),
+  validate,
+  utilities.handleErrors(booksController.updateBookRecord)
 );
 
 router.delete('/:id', utilities.handleErrors(booksController.deleteBookRecord));
