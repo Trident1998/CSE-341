@@ -14,7 +14,7 @@ router.post(
   bookValidationRules(),
   validate,
   utilities.handleErrors(async (req, res, next) => {
-    await booksController.createBookRecord(req, res, next);
+    booksController.createBookRecord(req, res, next);
   })
 );
 
