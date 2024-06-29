@@ -1,0 +1,93 @@
+[
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "publishedDate": "1960-07-11",
+    "genre": "Fiction",
+    "country": "USA"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "publishedDate": "1949-06-08",
+    "genre": "Dystopian",
+    "country": "UK"
+  },
+  {
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "publishedDate": "1925-04-10",
+    "genre": "Classic",
+    "country": "USA"
+  },
+  {
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "publishedDate": "1951-07-16",
+    "genre": "Fiction",
+    "country": "USA"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "publishedDate": "1813-01-28",
+    "genre": "Romance",
+    "country": "UK"
+  },
+  {
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "publishedDate": "1937-09-21",
+    "genre": "Fantasy",
+    "country": "UK"
+  },
+  {
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "publishedDate": "1851-10-18",
+    "genre": "Adventure",
+    "country": "USA"
+  },
+  {
+    "title": "Les Misérables",
+    "author": "Victor Hugo",
+    "publishedDate": "1862-01-01",
+    "genre": "Historical Fiction",
+    "country": "France"
+  },
+  {
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "publishedDate": "1866-01-01",
+    "genre": "Psychological Fiction",
+    "country": "Russia"
+  },
+  {
+    "title": "The Odyssey",
+    "author": "Homer",
+    "publishedDate": "-800-01-01",
+    "genre": "Epic",
+    "country": "Greece"
+  },
+  {
+    "title": "Evenings on a Farm Near Dikanka",
+    "author": "Nikolai Gogol",
+    "publishedDate": "1831-01-01",
+    "genre": "Short Stories",
+    "country": "Ukraine"
+  },
+  {
+    "title": "Notre-Dame de Paris",
+    "author": "Victor Hugo",
+    "publishedDate": "1831-01-14",
+    "genre": "Gothic Fiction",
+    "country": "France"
+  },
+  {
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "publishedDate": "1890-06-20",
+    "genre": "Philosophical Fiction",
+    "country": "UK"
+  }
+]

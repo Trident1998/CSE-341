@@ -1,3 +1,38 @@
+// PRODUCTION Deploy
+## Get all book records
+GET https://cse-341-project-2-cnxw.onrender.com/books
+
+### Get book record by id
+GET https://cse-341-project-2-cnxw.onrender.com/books/6680406eb0ac375a178bb989
+
+### Create book record
+POST https://cse-341-project-2-cnxw.onrender.com/books HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Kobzar",
+    "author": "Taras Shevchenko",
+    "publishedDate": "1840-01-01",
+    "genre": "Poetry",
+    "country": "Ukraine"
+}
+
+### PUT book record
+PUT https://cse-341-project-2-cnxw.onrender.com/books/6680406eb0ac375a178bb989 HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Kobzar Updated",
+    "author": "Taras Shevchenko Updated",
+    "publishedDate": "1840-01-01",
+    "genre": "Poetry",
+    "country": "Ukraine"
+}
+
+### DELETE book record
+DELETE https://cse-341-project-2-cnxw.onrender.com/books/6680406eb0ac375a178bb989 HTTP/1.1
+
+
 // LOCALHOST
 ### Get all book records
 GET http://localhost:8080/books
@@ -10,7 +45,7 @@ POST http://localhost:8080/books HTTP/1.1
 content-type: application/json
 
 {
-    "title": 1,
+    "title": "Kobzar",
     "author": "Taras Shevchenko",
     "publishedDate": "1840-01-01[]",
     "genre": "Poetry",
@@ -35,42 +70,3 @@ DELETE http://localhost:8080/books/667fe6d19176da6150925869 HTTP/1.1
 
 ### 404 NOT FOUND 
 GET http://localhost:8080/not-found
-
-
-// PRODUCTION Deploy
-### Get all book records
-GET https://cse341-instructor.herokuapp.com/book records
-
-
-### Get book record by id
-GET https://cse341-instructor.herokuapp.com/book records/622023f642f9ab4cd6e060b3
-
-
-### Create book record
-POST https://cse341-instructor.herokuapp.com/book records HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"Ashley",
-    "lastName":"Weaver",
-    "email":"aWeaver@test.com",
-    "favoriteColor":"Brown",
-    "birthday":"06/19/2000"
-}
-
-
-### PUT book record
-PUT https://cse341-instructor.herokuapp.com/book records/6220bcb39cd507e920c75a0b HTTP/1.1
-content-type: application/json
-
-{
-    "firstName":"Sarah",
-    "lastName":"Birch",
-    "email":"sarahB@gmail.com",
-    "favoriteColor":"Yellow",
-    "birthday":"06/12/20"
-}
-
-
-### DELETE book record
-DELETE https://cse341-instructor.herokuapp.com/books/667fe30b6ed06fd72165f580 HTTP/1.1
