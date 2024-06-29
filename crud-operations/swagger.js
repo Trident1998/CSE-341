@@ -6,7 +6,7 @@ const doc = {
     description: 'Books API'
   },
   host: process.env.HOST,
-  schemes: ['http']
+  schemes: [process.env.SCHEME]
 };
 
 const outputFile = './swagger-output.json';
