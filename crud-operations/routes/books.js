@@ -13,14 +13,18 @@ router.post(
   '/',
   bookValidationRules(),
   validate,
-  utilities.handleErrors(booksController.createBookRecord)
+  utilities.handleErrors(async (req, res, next) => {
+    await booksController.createBookRecord(req, res, next);
+  })
 );
 
 router.put(
   '/:id',
   bookValidationRules(),
   validate,
-  utilities.handleErrors(booksController.updateBookRecord)
+  utilities.handleErrors(async (req, res, next) => {
+    await booksController.updateBookRecord(req, res, next);
+  })
 );
 
 router.delete('/:id', utilities.handleErrors(booksController.deleteBookRecord));
