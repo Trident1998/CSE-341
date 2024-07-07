@@ -3,7 +3,7 @@
 GET https://cse-341-project-2-cnxw.onrender.com/books
 
 ### Get book record by id
-GET https://cse-341-project-2-cnxw.onrender.com/books/6680406eb0ac375a178bb989
+GET https://cse-341-project-2-cnxw.onrender.com/books/668043037655d52bf4025aa7
 
 ### Create book record
 POST https://cse-341-project-2-cnxw.onrender.com/books HTTP/1.1
@@ -18,7 +18,7 @@ content-type: application/json
 }
 
 ### PUT book record
-PUT https://cse-341-project-2-cnxw.onrender.com/books/6680406eb0ac375a178bb989 HTTP/1.1
+PUT https://cse-341-project-2-cnxw.onrender.com/books/668043037655d52bf4025aa7 HTTP/1.1
 content-type: application/json
 
 {
@@ -30,7 +30,7 @@ content-type: application/json
 }
 
 ### DELETE book record
-DELETE https://cse-341-project-2-cnxw.onrender.com/books/667fe6d19176da6150925869 HTTP/1.1
+DELETE https://cse-341-project-2-cnxw.onrender.com/books/668043037655d52bf4025aa7 HTTP/1.1
 
 
 // LOCALHOST
