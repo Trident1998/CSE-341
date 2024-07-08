@@ -53,7 +53,7 @@ content-type: application/json
 }
 
 ### PUT book record
-PUT http://localhost:8080/books/667fe6d19176da6150925868 HTTP/1.1
+PUT http://localhost:8080/books/667fe6d19176da6150925860 HTTP/1.1
 content-type: application/json
 
 {

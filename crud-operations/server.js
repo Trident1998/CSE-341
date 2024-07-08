@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
 const createError = require('http-errors');
 const passport = require('passport');
-const sessoin = require('express-session');
+const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
 
 const port = process.env.PORT || 8080;
@@ -12,7 +12,7 @@ const app = express();
 app
   .use(bodyParser.json())
   .use(
-    sessoin({
+    session({
       secret: 'seecret',
       resave: false,
       saveUninitialized: true
@@ -21,6 +21,7 @@ app
   .use(passport.initialize())
   .use(passport.session())
   .use((req, res, next) => {
+    console.log('CORS headers middleware');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader(
       'Access-Control-Allow-Headers',
@@ -31,13 +32,32 @@ app
   })
   .use('/', require('./routes'));
 
+app.get('/', (req, res) => {
+  console.log('GET /');
+  res.send(
+    req.session.user !== undefined ? `Logged in as ${req.session.user.username}` : 'Logged Out'
+  );
+});
+
+app.get(
+  '/github/callback',
+  passport.authenticate('github', {
+    failureRedirect: '/api-docs',
+    session: false
+  }),
+  (req, res) => {
+    req.session.user = req.user;
+    res.redirect('/');
+  }
+);
+
+// Handle 404 errors
 app.use((req, res, next) => {
   next(createError(404, 'Not found'));
 });
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500);
-
   res.send({
     error: {
       status: err.status || 500,
@@ -66,33 +86,17 @@ passport.use(
 passport.serializeUser((user, done) => {
   done(null, user);
 });
+
 passport.deserializeUser((user, done) => {
   done(null, user);
 });
-
-app.get('/', (req, res) => {
-  res.send(
-    req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : 'Logged Out'
-  );
-});
-
-app.get(
-  '/github/callback',
-  passport.authenticate('github', {
-    failureRedirect: '/api-docs',
-    session: false
-  }),
-  (req, res) => {
-    req.session.user = req.user;
-    res.redirect('/');
-  }
-);
 
 mongodb.initDb((err) => {
   if (err) {
     console.log(err);
   } else {
-    app.listen(port);
-    console.log(`Connected to DB and listening on ${port}`);
+    app.listen(port, () => {
+      console.log(`Connected to DB and listening on ${port}`);
+    });
   }
 });
